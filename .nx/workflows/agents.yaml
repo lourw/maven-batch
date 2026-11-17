@@ -1,0 +1,32 @@
+# The stock linux-medium-jvm template sets up Gradle and the ./nx wrapper.
+# This workspace builds with the Maven wrapper and installs nx from npm.
+launch-templates:
+  linux-medium-maven:
+    resource-class: 'docker_linux_amd64/medium'
+    image: 'ubuntu22.04-node24.14-v1'
+    init-steps:
+      - name: Checkout
+        uses: 'nrwl/nx-cloud-workflows/v6/workflow-steps/checkout/main.yaml'
+      - name: Restore Node Modules Cache
+        uses: 'nrwl/nx-cloud-workflows/v6/workflow-steps/cache/main.yaml'
+        inputs:
+          key: 'package-lock.json'
+          paths: 'node_modules'
+          base-branch: 'main'
+      - name: Restore Maven Repository Cache
+        uses: 'nrwl/nx-cloud-workflows/v6/workflow-steps/cache/main.yaml'
+        inputs:
+          key: 'pom.xml|*/pom.xml|.mvn/wrapper/maven-wrapper.properties'
+          paths: |
+            ~/.m2/repository
+            ~/.m2/wrapper
+          base-branch: 'main'
+      - name: Install Node
+        uses: 'nrwl/nx-cloud-workflows/v6/workflow-steps/install-node/main.yaml'
+      - name: Install Java
+        uses: 'nrwl/nx-cloud-workflows/v6/workflow-steps/install-mise/main.yaml'
+        inputs:
+          tools: |
+            java=temurin-21
+      - name: Install Node Modules
+        uses: 'nrwl/nx-cloud-workflows/v6/workflow-steps/install-node-modules/main.yaml'

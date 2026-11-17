@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "@nx/maven": "25.0.0",
-    "nx": "25.0.0"
+    "@nx/maven": "24.0.6",
+    "nx": "24.0.6"
   }
 }

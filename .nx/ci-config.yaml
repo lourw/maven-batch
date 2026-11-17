@@ -1,0 +1,8 @@
+dte:
+  distribute-on: 3 linux-medium-maven
+
+lifecycle:
+  stop-after:
+    - build
+    - test
+    - lint

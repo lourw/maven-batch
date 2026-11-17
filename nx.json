@@ -4,6 +4,6 @@
     "@nx/maven"
   ],
   "analytics": true,
-  "nxCloudUrl": "http://localhost:4203",
+  "nxCloudUrl": "http://host.docker.internal:4203",
   "nxCloudId": "6afbbf5fb2ff8f078b8729a2"
 }
