@@ -1,5 +1,5 @@
 {
-  "bust": 2,
+  "bust": 3,
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "plugins": [
     "@nx/maven"
