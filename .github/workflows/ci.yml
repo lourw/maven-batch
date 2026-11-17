@@ -14,6 +14,9 @@ jobs:
   main:
     env:
       NX_CLOUD_VERBOSE_LOGGING: true
+      # Agents run a task cluster's Maven tasks as one Nx batch. Needs the nx
+      # release with nrwl/nx#37902, which package.json pins.
+      NX_CLOUD_AGENT_BATCH_CLUSTER_TASKS: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
