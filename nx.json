@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "plugins": [
+    "@nx/maven"
+  ],
+  "analytics": true,
+  "nxCloudUrl": "http://localhost:4203",
+  "nxCloudId": "6afbbf5fb2ff8f078b8729a2"
+}

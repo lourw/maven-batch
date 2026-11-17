@@ -1,0 +1,10 @@
+{
+  "name": "maven-batch",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "@nx/maven": "25.0.0",
+    "nx": "25.0.0"
+  }
+}

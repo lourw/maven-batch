@@ -1,0 +1,14 @@
+{
+  "name": "dev.benchmark:utils",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "executor": "nx:noop",
+      "dependsOn": ["package"]
+    },
+    "lint": {
+      "executor": "nx:noop",
+      "dependsOn": ["checkstyle:check"]
+    }
+  }
+}
